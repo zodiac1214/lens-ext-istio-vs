@@ -1,12 +1,8 @@
-# Optical
+# Istio virtual service/ingress Quick access
 
-Simple [Lens](https://k8slens.dev) extension that presents an iFrame of web content like a dashboard.
+Inspired by [Optical](https://github.com/589290/optical)
 
-![](./assets/iframe.png)
-
-It is configurable via Lens' preferences page.
-
-![](./assets/pref.png)
+Simple [Lens](https://k8slens.dev) extension that presents your istio ingress enabled webpage in iframe
   
 
 ## Build
