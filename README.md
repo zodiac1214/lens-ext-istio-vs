@@ -4,4 +4,4 @@ Simple [Lens](https://k8slens.dev) extension that presents your istio ingress en
 
 ## Install
 
-Download extension tgz package from [releases](https://registry.npmjs.org/lens-ext-istio-vs/-/lens-ext-istio-vs-1.0.0.tgz) and install it to Lens
+Download extension tgz package from [releases](https://registry.npmjs.org/lens-ext-istio-vs/-/lens-ext-istio-vs-1.0.1.tgz) and install it to Lens
