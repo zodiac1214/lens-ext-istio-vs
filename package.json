@@ -1,18 +1,17 @@
 {
-  "name": "@k8slens/istio-vs-gateway",
-  "version": "1.0.0",
+  "name": "lens-ext-istio-vs",
+  "version": "1.0.1",
   "author": "Di Zou",
   "maintainers": [
     {
       "name": "Di Zou",
-      "email": "zodiac1214@github.com"
+      "email": "di.zou1214@gmail.com"
     }
   ],
-  "description": "Lens extension Styling with CSS Modules sample",
+  "description": "Lens extension - quick Istio Virtual Service access",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lensapp/lens-extension-samples.git",
-    "directory": "optical"
+    "url": "https://github.com/zodiac1214/lens-ext-istio-vs.git"
   },
   "main": "dist/main.js",
   "renderer": "dist/renderer.js",
@@ -49,9 +48,9 @@
     "webpack-cli": "^4.2.0"
   },
   "license": "MIT",
-  "homepage": "https://google.com",
+  "homepage": "https://github.com/zodiac1214/lens-ext-istio-vs",
   "bugs": {
-    "url": "https://google.com"
+    "url": "https://github.com/zodiac1214/lens-ext-istio-vs"
   },
   "keywords": [
     "example",
