@@ -21,7 +21,7 @@ export class IstioVsDetails extends React.Component<Component.KubeObjectDetailsP
         <Component.DrawerItem name="Hosts">
           {
             this.props.object.spec.hosts.map((host: string) => {
-              if (host !== "*") {
+              if (! host.includes("*")) {
                 return(
                   <div className={Util.cssNames("PodContainerPort")}>
                     <span title="Open in a browser" onClick={() => Util.openExternal(`https://${host}`) }>
