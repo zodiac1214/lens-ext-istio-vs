@@ -12,4 +12,4 @@ Download extension tgz package from [releases](https://registry.npmjs.org/lens-e
 # Roadmap
 
 - [x] Easy access to a virtual service (open a new tab)
-- [] Adding metrics chart in virtual service details view
+- [ ] Adding metrics chart in virtual service details view
