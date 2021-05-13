@@ -1,6 +1,6 @@
 import React from "react";
 import { Component, K8sApi, LensRendererExtension } from '@k8slens/extensions';
-import { IstioVsDetails } from "./istio-vs-details";
+import { IstioVsDetails } from "./details";
 
 export default class ModulesStylingExtension extends LensRendererExtension {
   kubeObjectDetailItems = [

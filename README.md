@@ -9,6 +9,8 @@ Simple [Lens](https://k8slens.dev) extension that allows you to visit an Istio v
 
 Download extension tgz package from [releases](https://registry.npmjs.org/lens-ext-istio-vs/-/lens-ext-istio-vs-1.0.1.tgz) and install it to Lens
 
+lens://app/extensions/install/lens-ext-istio-vs
+
 # Roadmap
 
 - [x] Easy access to a virtual service (open a new tab)

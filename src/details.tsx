@@ -3,7 +3,6 @@ import React from "react";
 
 export class IstioVsDetails extends React.Component<Component.KubeObjectDetailsProps<any>> {
   render() {
-    console.log(this.props.object)
     let components;
     return (
       <div>
