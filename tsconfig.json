@@ -8,7 +8,7 @@
     "sourceMap": true,
     "declaration": false,
     "strict": false,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,

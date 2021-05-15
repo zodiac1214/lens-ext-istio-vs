@@ -1,16 +1,18 @@
 import { Component, Util } from "@k8slens/extensions";
 import React from "react";
 
-export class IstioVsDetails extends React.Component<Component.KubeObjectDetailsProps<any>> {
+export class IstioVsDetails extends React.Component<
+  Component.KubeObjectDetailsProps<any>
+> {
   render() {
     let components;
     return (
       <div>
-        <Component.DrawerItem name="Name" >
-          { this.props?.object?.metadata?.name || "-"  }
+        <Component.DrawerItem name="Name">
+          {this.props?.object?.metadata?.name || "-"}
         </Component.DrawerItem>
-        <Component.DrawerItem name="Namespace" >
-          { this.props?.object?.metadata?.namespace || "-"  }
+        <Component.DrawerItem name="Namespace">
+          {this.props?.object?.metadata?.namespace || "-"}
         </Component.DrawerItem>
         <Component.DrawerItemLabels
           name="Labels"
@@ -18,24 +20,26 @@ export class IstioVsDetails extends React.Component<Component.KubeObjectDetailsP
         />
 
         <Component.DrawerItem name="Hosts">
-          {
-            this.props.object.spec.hosts.map((host: string) => {
-              if (! host.includes("*")) {
-                return(
-                  <div className={Util.cssNames("PodContainerPort")}>
-                    <span title="Open in a browser" onClick={() => Util.openExternal(`https://${host}`) }>
-                      {host}
-                    </span>
-                  </div>
-                );
-              }
-            })
-          }
+          {this.props.object.spec.hosts.map((host: string) => {
+            if (!host.includes("*")) {
+              return (
+                <div className={Util.cssNames("PodContainerPort")}>
+                  <span
+                    title="Open in a browser"
+                    onClick={() => Util.openExternal(`https://${host}`)}
+                  >
+                    {host}
+                  </span>
+                </div>
+              );
+            }
+          })}
         </Component.DrawerItem>
 
-        <Component.DrawerTitle title="Gateway"/>
-        <Component.Badge>{this.props.object.spec.gateways}</Component.Badge>
+        <Component.DrawerItem name="Gateway">
+          {this.props.object.spec.gateways}
+        </Component.DrawerItem>
       </div>
-    )
+    );
   }
 }

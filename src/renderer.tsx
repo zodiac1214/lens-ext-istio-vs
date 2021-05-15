@@ -1,5 +1,5 @@
 import React from "react";
-import { Component, K8sApi, LensRendererExtension } from '@k8slens/extensions';
+import { Component, K8sApi, LensRendererExtension } from "@k8slens/extensions";
 import { IstioVsDetails } from "./details";
 
 export default class ModulesStylingExtension extends LensRendererExtension {
@@ -9,12 +9,12 @@ export default class ModulesStylingExtension extends LensRendererExtension {
       apiVersions: ["networking.istio.io/v1alpha3"],
       priority: 2,
       components: {
-        Details: (props: Component.KubeObjectDetailsProps<K8sApi.Namespace>) => <IstioVsDetails {...props} />
-      }
-    }
-  ]
+        Details: (
+          props: Component.KubeObjectDetailsProps<K8sApi.Namespace>
+        ) => <IstioVsDetails {...props} />,
+      },
+    },
+  ];
 
-  async onActivate() {
-  }
-
+  async onActivate() {}
 }
