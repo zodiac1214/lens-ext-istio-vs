@@ -1,0 +1,26 @@
+.ResourceMetrics {
+  position: relative;
+  margin-bottom: 16px;
+}
+.ResourceMetrics .switchers {
+  margin-bottom: 16px;
+  text-align: center;
+}
+.ResourceMetrics .graph:empty + .loader {
+  display: flex;
+  height: 222px;
+  align-items: center;
+  justify-content: center;
+}
+.ResourceMetrics .graph .Chart .chart-container {
+  min-height: 200px;
+}
+.ResourceMetrics .graph .Chart .legend {
+  justify-content: center;
+}
+.ResourceMetrics .graph .Chart .legend > * {
+  margin-right: 16px;
+}
+.ResourceMetrics .loader {
+  display: none;
+}
