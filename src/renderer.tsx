@@ -1,8 +1,8 @@
 import React from "react";
-import { Component, K8sApi, LensRendererExtension } from "@k8slens/extensions";
+import { Renderer } from "@k8slens/extensions";
 import { IstioVsDetails } from "./details";
 
-export default class ModulesStylingExtension extends LensRendererExtension {
+export default class ModulesStylingExtension extends Renderer.LensExtension {
   kubeObjectDetailItems = [
     {
       kind: "VirtualService",
@@ -10,7 +10,7 @@ export default class ModulesStylingExtension extends LensRendererExtension {
       priority: 2,
       components: {
         Details: (
-          props: Component.KubeObjectDetailsProps<K8sApi.Namespace>
+          props: Renderer.Component.KubeObjectDetailsProps<Renderer.K8sApi.Namespace>
         ) => <IstioVsDetails {...props} />,
       },
     },

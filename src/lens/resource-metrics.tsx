@@ -1,11 +1,11 @@
 import "./resource-metrics.scss";
 
 import React, { createContext, useEffect, useRef, useState } from "react";
-import { Component, K8sApi, Util } from "@k8slens/extensions";
+import { Renderer, Common } from "@k8slens/extensions";
 
 interface Props extends React.HTMLProps<any> {
   tabs: React.ReactNode[];
-  object?: K8sApi.KubeObject;
+  object?: Renderer.K8sApi.KubeObject;
   loader?: () => void;
   interval?: number;
   className?: string;
@@ -14,7 +14,7 @@ interface Props extends React.HTMLProps<any> {
   };
 }
 
-export type IResourceMetricsValue<T extends K8sApi.KubeObject = any, P = any> =
+export type IResourceMetricsValue<T extends Renderer.K8sApi.KubeObject = any, P = any> =
   {
     object: T;
     tabId: number;
@@ -69,7 +69,7 @@ export function ResourceMetrics({
     return (
       <>
         <div className="switchers">
-          <Component.RadioGroup
+          <Renderer.Component.RadioGroup
             asButtons
             className="flex box grow gaps"
             value={tabs[tabId]}
@@ -78,22 +78,22 @@ export function ResourceMetrics({
             }
           >
             {tabs.map((tab, index) => (
-              <Component.Radio key={index} className="box grow" label={tab} value={tab} />
+              <Renderer.Component.Radio key={index} className="box grow" label={tab} value={tab} />
             ))}
-          </Component.RadioGroup>
+          </Renderer.Component.RadioGroup>
         </div>
         <ResourceMetricsContext.Provider value={{ object, tabId, params }}>
           <div className="graph">{children}</div>
         </ResourceMetricsContext.Provider>
         <div className="loader">
-          <Component.Spinner />
+          <Renderer.Component.Spinner />
         </div>
       </>
     );
   };
 
   return (
-    <div className={Util.cssNames("ResourceMetrics flex column", className)}>
+    <div className={Common.Util.cssNames("ResourceMetrics flex column", className)}>
       {renderContents()}
     </div>
   );
